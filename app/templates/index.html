@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/content.css">
+    <title>Demo Máy Học</title>
+  </head>
+  <body>
+    <h1>Dự Đoán Đột Quỵ</h1>
+    <form method="POST">
+      <label for="Gender">Bạn là nam hay nữ:</label>
+      <select name="Gender" required>
+        <option value="1">Nam</option>
+        <option value="0">Nữ</option>
+      </select>
+      <br />
+      <label name="Age">Tuổi của bạn:</label>
+      <input name="Age" />
+      <br />
+      <label for="hypertension">Bạn có bị cao huyết áp không:</label>
+      <select name="hypertension" required>
+        <option value="1">Có</option>
+        <option value="0">Không</option>
+      </select>
+      <br />
+      <label for="heart_disease">Bạn có bị bệnh tim không:</label>
+      <select name="heart_disease" required>
+        <option value="1">Có</option>
+        <option value="0">Không</option>
+      </select>
+      <br />
+      <label for="ever_married">Bạn đã kết hôn chưa:</label>
+      <select name="ever_married" required>
+        <option value="1">Rồi</option>
+        <option value="0">Chưa</option>
+      </select>
+      <br />
+      <label for="work_type">Bạn làm công việc gì:</label>
+      <select name="work_type" required>
+        <option value="2">Riêng Tư</option>
+        <option value="4">Tự kinh doanh</option>
+        <option value="3">Về trẻ em</option>
+        <option value="0">Công việc nhà nước</option>
+        <option value="1">Chưa từng làm gì</option>
+      </select>
+      <br />
+      <label for="Residence_type">Bạn ở nông thôn hay thành thị:</label>
+      <select name="Residence_type" required>
+        <option value="1">Nông thôn</option>
+        <option value="0">Thành thị</option>
+      </select>
+      <br />
+      <label name="avg_glucose_level">Glucose trung bình của bạn:</label>
+      <input name="avg_glucose_level" />
+      <br />
+      <label name="bmi">Chỉ số khối của bạn:</label>
+      <input name="bmi" />
+      <br />
+      <label for="smoking_status">Bạn có hút thuốc không:</label>
+      <select name="smoking_status" required>
+        <option value="2">Chưa bao giờ</option>
+        <option value="0">Đã từng hút</option>
+        <option value="1">Có hút</option>
+        <option value="3">Không xác định</option>
+      </select>
+      <br />
+      <input class="btn" type="submit" value="Kiểm tra" />
+    </form>
+
+    <p name="predict">Kết quả: {{ prediction }}</p>
+  </body>
+</html>
